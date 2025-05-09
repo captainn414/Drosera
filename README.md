@@ -216,7 +216,7 @@ drosera-operator register --eth-rpc-url https://eth-holesky.g.alchemy.com/v2/you
 ```
 قسمت های your_private_key و your-api-key  این ها رو اطلاعات خودتون رو میدید
 
-# ۵️⃣ باز کردن پورت‌ها (Open Ports)
+#  باز کردن پورت‌ها (Open Ports)
 
 ```
 # Enable firewall
