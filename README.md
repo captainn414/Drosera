@@ -82,14 +82,13 @@ source ~/.bashrc
 ```
 mkdir my-drosera-trap && cd my-drosera-trap
 ```
-⚙️ تنظیم ایمیل در Git
+⚙️ تنظیم ایمیل در Git(ایمیل گیت هاب)
 ```
 git config --global user.email "your_email@example.com"
 ```
 
 
-👤 تنظیم نام کاربری در Git
-
+👤 تنظیم نام کاربری در Git( یوزرنیم گیت هاب)
 ```
 git config --global user.name "your_username"
 ```
