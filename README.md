@@ -51,3 +51,10 @@ sudo apt update && sudo apt install -y docker-ce docker-ce-cli containerd.io doc
 sudo docker run hello-world
 
  ``` 
+**2️⃣ تنظیم محیط (Environment Setup)**
+✅ نصب Drosera CLI:
+```
+curl -L https://app.drosera.io/install | bash
+source ~/.bashrc
+droseraup
+```
