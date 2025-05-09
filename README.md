@@ -116,6 +116,10 @@ DROSERA_PRIVATE_KEY=your_private_key drosera apply
 
 از یک کیف پول استفاده کن که روی شبکه Holesky مقداری ETH داشته باشد.
 وقتی ازت سؤال شد، بنویس: ofc
+بعد اینکه  ofc زدید  ادرس trap بهتون میده مثل عکس زیر 
+![image](https://github.com/user-attachments/assets/fe75a63e-f53c-4ec1-9105-7ffc6f3c4f25)
+
+
 
 
 **4️⃣ بررسی Trap در داشبورد**
