@@ -117,6 +117,7 @@ DROSERA_PRIVATE_KEY=your_private_key drosera apply
 از یک کیف پول استفاده کن که روی شبکه Holesky مقداری ETH داشته باشد.
 وقتی ازت سؤال شد، بنویس: ofc
 بعد اینکه  ofc زدید  ادرس trap بهتون میده مثل عکس زیر 
+
 ![image](https://github.com/user-attachments/assets/fe75a63e-f53c-4ec1-9105-7ffc6f3c4f25)
 
 
@@ -127,6 +128,117 @@ DROSERA_PRIVATE_KEY=your_private_key drosera apply
 وارد شو به: app.drosera.io
 
 کیف پول EVM خودت رو متصل کن → در بخش "Traps Owned" بررسی کن.
+![image](https://github.com/user-attachments/assets/1484ad69-7086-4899-b535-3430e9a1f307)
+
+
+۵️⃣ #**ارسال Bloom Boost به Trap**
+
+برو به Trap خودت ← روی گزینه "Send Bloom Boost" کلیک کن ومقداری تریوم Holesky ارسال کن.
+
+![image](https://github.com/user-attachments/assets/fdc1ddc9-6278-43a0-856a-031a7ad7f977)
+
+**6-دریافت Sample Block**
+
+```
+drosera dryrun
+```
+
+خروجی بدین شکل خواهد بود 
+![image](https://github.com/user-attachments/assets/1987c104-a057-4137-9d78-37ce4e387241)
+
+
+# راه‌اندازی اپراتور
+
+**1-وایت‌لیست کردن اپراتور**
+```
+cd my-drosera-trap
+nano drosera.toml
+```
+
+بعد  زدن  دستور  این اطلاعات رو میبینید .
+```
+ethereum_rpc = "https://eth-holesky.g.alchemy.com/v2/your-api-key"
+drosera_rpc = "https://relay.testnet.drosera.io"
+eth_chain_id = 17000
+drosera_address = "0xea08f7d533C2b9A62F40D5326214f39a8E3A32F8"
+
+[traps.mytrap]
+path = "out/HelloWorldTrap.sol/HelloWorldTrap.json"
+response_contract = "0xdA890040Af0533D98B9F5f8FE3537720ABf83B0C"
+response_function = "helloworld(string)"
+cooldown_period_blocks = 33
+min_number_of_operators = 1
+max_number_of_operators = 2
+block_sample_size = 10
+private_trap = true
+address = "generated after dryrun"
+whitelist = ["your_wallet_address"]
+```
+آدرس your_wallet_address را با آدرس عمومی کیف پول EVM خودت جایگزین کن، داخل علامت " "
+
+و به جای ethereum_rpc   اون  rpc که گذفتیم جاگذاری کنید
+
+**2-به‌روزرسانی تنظیمات Trap**
+```
+DROSERA_PRIVATE_KEY=your_private_key drosera apply
+```
+
+اگر خطا خوردید  تو این قسمت بروزرسانی از این استفاده کنید (  اگه نخوردید اینجارو رد کنید )
+```
+DROSERA_PRIVATE_KEY=your_private_key drosera apply --eth-rpc-url RPC
+```
+
+به جای rpc  از rpc که گرفتیم استفاده کنید 
+
+
+# نصب Drosera Operator CLI
+```
+cd ~
+sudo apt update && sudo apt install -y tar
+
+curl -LO https://github.com/drosera-network/releases/releases/download/v1.17.2/drosera-operator-v1.17.2-x86_64-unknown-linux-gnu.tar.gz
+tar -xvf drosera-operator-v1.17.2-x86_64-unknown-linux-gnu.tar.gz
+
+sudo cp drosera-operator /usr/bin
+drosera-operator --version
+```
+
+ # مرحله بعد نصب   Pull Docker Image
+ ```
+docker pull ghcr.io/drosera-network/drosera-operator:latest
+```
+
+# مرحله بعد Register Operator
+
+```
+drosera-operator register --eth-rpc-url https://eth-holesky.g.alchemy.com/v2/your-api-key --eth-private-key your_private_key
+
+```
+قسمت های your_private_key و your-api-key  این ها رو اطلاعات خودتون رو میدید
+
+# ۵️⃣ باز کردن پورت‌ها (Open Ports)
+
+```
+# Enable firewall
+sudo ufw allow ssh
+sudo ufw allow 22
+sudo ufw enable
+
+# Allow Drosera ports
+sudo ufw allow 31313/tcp
+sudo ufw allow 31314/tcp
+```
+
+
+# ران کردن نود 
+```
+git clone https://github.com/HeavenOG/Drosera-Network && cd Drosera-Network
+cp .env.example .env
+nano .env
+
+```
+قسمتی که اومد پرایوت کی و vps ip تون رو بزنید
+
 
 
 
