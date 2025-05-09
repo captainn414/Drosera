@@ -1,5 +1,4 @@
-# اDrosera  راهنمای نصب و اجرای نود 
-
+# راهنمای نصب و اجرای نود  Drosera  
 ⚙️ا گرفتن rpc  از Alchemy 
 
 وارد سایت https://www.alchemy.com/ شوید 
