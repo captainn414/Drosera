@@ -52,9 +52,69 @@ sudo docker run hello-world
 
  ``` 
 **2️⃣ تنظیم محیط (Environment Setup)**
+
 ✅ نصب Drosera CLI:
 ```
 curl -L https://app.drosera.io/install | bash
 source ~/.bashrc
 droseraup
 ```
+🛠️ نصب Foundry 
+```
+curl -L https://foundry.paradigm.xyz | bash
+source ~/.bashrc
+foundryup
+```
+
+
+⚡ نصب Bun
+```
+curl -fsSL https://bun.sh/install | bash
+source ~/.bashrc
+```
+
+استقرار قرارداد (Contract) و راه‌اندازی Trap در DROSERA
+```
+mkdir my-drosera-trap && cd my-drosera-trap
+```
+⚙️ تنظیم ایمیل در Git
+```
+git config --global user.email "your_email@example.com"
+```
+
+
+👤 تنظیم نام کاربری در Git
+
+```
+git config --global user.name "your_username"
+```
+  و nitialize Project
+  ```
+forge init -t drosera-network/trap-foundry-template
+```
+و Install & build:
+
+```
+bun install
+forge build
+```
+
+🚀 استقرار Trap در Drosera 
+```
+
+DROSERA_PRIVATE_KEY=your_private_key drosera apply
+  
+```
+
+از یک کیف پول استفاده کن که روی شبکه Holesky مقداری ETH داشته باشد.
+وقتی ازت سؤال شد، بنویس: ofc
+
+
+**4️⃣ بررسی Trap در داشبورد**
+
+وارد شو به: app.drosera.io
+
+کیف پول EVM خودت رو متصل کن → در بخش "Traps Owned" بررسی کن.
+
+
+
