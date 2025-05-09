@@ -103,6 +103,9 @@ forge init -t drosera-network/trap-foundry-template
 bun install
 forge build
 ```
+این خطا مورد نداره رد کنید برید جلو 
+![image](https://github.com/user-attachments/assets/82920843-add0-4e62-999d-5031efa4f118)
+
 
 🚀 استقرار Trap در Drosera 
 ```
