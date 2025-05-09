@@ -239,6 +239,29 @@ nano .env
 ```
 قسمتی که اومد پرایوت کی و vps ip تون رو بزنید
 
+تو این مرحله rpc رو باید جایگذاری باید کنید بعد این عبارت --eth-rpc-url  نوشته  your   rpc  جایگرین میکنید بعد سیو میکنید 
+
+```
+nano docker-compose.yaml
+```
+
+# ران کردن 
+```
+docker compose up -d
+docker logs -f drosera-node
+```
+
+![image](https://github.com/user-attachments/assets/ae5a859e-d299-4ef3-93be-720b36daecf7)
+
+
+# مرحله بعد  Opt-in to Trap
+![image](https://github.com/user-attachments/assets/596044a7-202b-4685-b815-11d1d60953b1)
+
+
+
+وآخر  وضعیت نودتون تو داشبورد باید اینطور باشه 
+
+![image](https://github.com/user-attachments/assets/b1aee33b-43c6-4adc-b973-7ff3efe9b1db)
 
 
 
