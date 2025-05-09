@@ -100,8 +100,8 @@ forge init -t drosera-network/trap-foundry-template
 و Install & build:
 
 ```
-bun install
-forge build
+curl -fsSL https://bun.sh/install | bash
+source /root/.bashrc
 ```
 
 🚀 استقرار Trap در Drosera 
